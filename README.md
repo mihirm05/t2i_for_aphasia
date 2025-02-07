@@ -3,8 +3,7 @@
 This repository contains the code for our paper "Exploring applicability of Text-to-Image models
 for generating aphasia rehabilitation material".
 
-**Repository structure**
-## Project Structure 📂
+### Project Structure 📂
 
 ```
 t2i_for_aphasia/
