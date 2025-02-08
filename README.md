@@ -29,12 +29,44 @@ t2i_for_aphasia/
 │   │   ├── clip/                                 # clip scores as pkl file for both image sizes
 │   │   ├── tifa/                                 # tifa scores as pkl file for both image sizes
 ├── README.md                                     # Project documentation
-└── prompt.txt                                    # the prompts used to generate the images information
+└── prompts.txt                                    # the prompts used to generate the images information
 ```
 
 
 ### Replicating the experiments
-1. Image Generation:
-    - DALL-E: The images (1024x1024x3) are taken from the work of [Pierce et al.](https://pubs.asha.org/doi/abs/10.1044/2023_AJSLP-23-00142). These images are resized to 512x512x3
-and used for analysis at lower resolution as well.
-    - SDXL, Flux Schnell and SD Turbo notebooks yield pkl files. 
+1. Image Generation: 
+    - DALL-E: 
+        - images (1024x1024x3) are taken from the work of [Pierce et al.](https://pubs.asha.org/doi/abs/10.1044/2023_AJSLP-23-00142). These images are resized to 512x512x3 and used for analysis at lower resolution as well.
+
+    - [SDXL](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/image%20generation/stable-diffusion-xl-base.ipynb), [Flux Schnell](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/image%20generation/flux-schnell.ipynb), and [SD Turbo](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/image%20generation/sdxl-turbo.ipynb):
+        - input: input text prompts and dimensions of images to be generated [(512x512x3) or (1024x1024x3)]
+        - output: generated images as pkl files
+       
+
+2. T2I metric evaluation:
+    - [IS](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/metrics/evalis.ipynb):
+        - input:
+            - DALL-E: generated images
+            - SDXL, Flux Schnell, and SD Turbo: pkl files of the generated images
+        - output: incetion score value
+
+    - [CLIPScore](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/metrics/evalclipscore.ipynb):
+        - input:
+            - DALL-E: generated images
+            - SDXL, Flux Schnell, and SD Turbo: pkl files of the generated images
+        - output: pkl files containing the CLIPScore
+
+    - [TIFA](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/metrics/evaltifa.ipynb):
+        - input: generated images
+        - output: pkl files containing the TIFA values
+
+3. Metric score visualization:
+    - [CLIPScore](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/metric%20visualization/visclipscore.ipynb):
+        - input: CLIPScore pkl files from metric evaluation
+        - output: scatter plots and histograms for models
+    - [TIFA](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/metric%20visualization/vistifa.ipynb):
+        - input: TIFA pkl files from metric evaluation
+        - output: scatter plots and histograms for models
+
+    
+    
