@@ -67,6 +67,3 @@ t2i_for_aphasia/
     - [TIFA](https://github.com/mihirm05/t2i_for_aphasia/blob/main/src/metric%20visualization/vistifa.ipynb):
         - input: TIFA pkl files from metric evaluation
         - output: scatter plots and histograms for models
-
-    
-    
