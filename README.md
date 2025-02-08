@@ -24,12 +24,12 @@ t2i_for_aphasia/
 │   │   ├── DALL-E 2/                             # DALL-E 2 generated images
 │   │   ├── Flux Schnell/                         # Flux Schnell generated images (contains both 512x512x3 and 1024x1024x3 image sizes)
 │   │   └── SDXL Turbo/                           # SDXL Turbo generated images (contains both 512x512x3 and 1024x1024x3 image sizes)
-│   │   └── SDXL/                                 # SDXL Turbo generated images (contains both 512x512x3 and 1024x1024x3 image sizes)
+│   │   └── SDXL/                                 # SD generated images (contains both 512x512x3 and 1024x1024x3 image sizes)
 │   ├── metrics/               
-│   │   ├── clip/                                 # clip scores as pkl file for both image sizes
-│   │   ├── tifa/                                 # tifa scores as pkl file for both image sizes
+│   │   ├── clip/                                 # compute clip scores for both image sizes
+│   │   ├── tifa/                                 # compute tifa scores for both image sizes
 ├── README.md                                     # Project documentation
-└── prompts.txt                                    # the prompts used to generate the images information
+└── prompts.txt                                   # the prompts used to generate the images information
 ```
 
 
